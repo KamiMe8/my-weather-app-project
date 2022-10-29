@@ -282,3 +282,17 @@ body {
   color: rgb(223, 82, 31);
   padding: 4px 5px;
 }
+
+.footer {
+  position: relative;
+  text-align: center;
+  font-size: 12px;
+}
+
+.github-link {
+  text-decoration: none;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
