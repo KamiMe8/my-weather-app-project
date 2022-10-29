@@ -1,0 +1,284 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(
+    401px at 50.6% -0.3%,
+    rgba(255, 255, 255, 0.31) 1.2%,
+    rgb(36, 212, 219) 100.2%
+  );
+  overflow-x: hidden;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.search-pannel {
+  width: 600px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding-left: 20px;
+}
+
+.search-pannel:focus {
+  outline: none;
+}
+
+.current-location-icon {
+  font-size: 36px;
+  position: relative;
+  left: -60px;
+  top: 8px;
+  opacity: 0.8;
+  transition: all 100ms ease-in-out;
+}
+
+.current-location-icon:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* MAIN PAGE */
+
+.container {
+  padding-bottom: 340px;
+}
+
+.weather-today-wrapper {
+  background-color: rgba(24, 24, 37, 0.9);
+  color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  width: 450px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  float: right;
+  top: 60px;
+}
+
+.weather-today-icon {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.weather-today-city {
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.current-temperature {
+  font-size: 60px;
+  margin: 0;
+}
+
+.min-max-temperature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.today-or-5-days-wrapper-top {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  position: relative;
+  top: 320px;
+  left: 940px;
+}
+
+.today-or-5-days-button-top,
+.today-or-5-days-button-bottom,
+.unactive {
+  border-radius: 40px;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  border: 2px solid #8888ad;
+  background-color: #fff;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+.today-or-5-days-button-top:hover,
+.today-or-5-days-button-bottom:hover,
+.active {
+  opacity: 1;
+}
+
+.date-info {
+  background-color: rgba(24, 24, 37, 0.9);
+  color: #fff;
+  padding: 34px;
+  border-radius: 30px;
+  width: 600px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  float: left;
+  top: 350px;
+}
+
+.month-date {
+  font-size: 80px;
+  text-align: center;
+}
+
+.month-time {
+  padding-right: 20px;
+}
+
+.time::before {
+  content: "|";
+  position: relative;
+  right: 2px;
+  padding: 0 6px;
+}
+
+.sunrise-icon {
+  position: relative;
+  top: -9px;
+  right: 2px;
+}
+
+.sunset-icon {
+  position: relative;
+  top: -9px;
+  left: 7px;
+}
+
+.sunset-time {
+  position: relative;
+  left: 9px;
+}
+
+.random-quote-wrapper {
+  background-color: rgba(24, 24, 37, 0.9);
+  color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  width: 450px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  top: 140px;
+  left: 450px;
+}
+
+/* .random-quote {
+  padding: 15px 20px;
+  text-indent: 20px;
+  text-align: justify;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.quote-author {
+  font-weight: bold;
+  padding: 20px;
+  text-align: right;
+  color: inherit;
+  font-size: 16px;
+} */
+
+/* 5 DAYS FORECAST PAGE */
+
+.today,
+.forecast {
+  position: relative;
+  top: -230px;
+  left: -30px;
+}
+
+.today-or-5-days-wrapper-bottom {
+  position: relative;
+  top: 600px;
+  left: 400px;
+}
+
+.city-name {
+  position: relative;
+  text-align: center;
+  top: 620px;
+  left: -80px;
+  font-weight: bold;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  text-transform: capitalize;
+}
+
+.wrapper-5-days {
+  border: none;
+  border-radius: 34px;
+  width: 1100px;
+  height: 300px;
+  position: relative;
+  left: 90px;
+  top: 300px;
+  background-color: rgba(24, 24, 37, 0.8);
+}
+
+.item-5-days {
+  border: none;
+  border-radius: 34px;
+  height: 240px;
+  margin: auto 20px;
+  background-color: rgba(24, 24, 37, 0);
+  text-align: center;
+  padding: 34px;
+  color: #fff;
+  transition: all 100ms ease-in-out;
+}
+
+.item-5-days:hover {
+  background-color: rgb(165, 165, 192, 0.3);
+}
+
+.item-5-days-day {
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+.item-5-days-date {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+.item-5-days-icon {
+  font-size: 28px;
+  padding: 24px;
+}
+
+.min-label,
+.max-label {
+  padding: 0 6px;
+  opacity: 0.7;
+}
+
+.min-label::after {
+  content: " |";
+  width: 1px;
+  height: 30px;
+  color: #fff;
+  position: relative;
+  left: 5px;
+}
+
+.min-temperature,
+.max-temperature {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(223, 82, 31);
+  padding: 4px 5px;
+}
