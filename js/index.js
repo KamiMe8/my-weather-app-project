@@ -145,8 +145,6 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-// SUNSET AND SUNRISE TIME
-
 // RANDOM QUOTE GENERATION
 
 // FIVE DAYS BLOCK: day, date
