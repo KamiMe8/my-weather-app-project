@@ -50,7 +50,6 @@ body {
 .weather-today-wrapper {
   background-color: rgba(24, 24, 37, 0.9);
   color: #fff;
-  padding: 20px;
   border-radius: 30px;
   width: 450px;
   height: 280px;
@@ -63,12 +62,12 @@ body {
 }
 
 .weather-today-icon {
-  font-size: 40px;
-  padding-bottom: 10px;
+  height: 82px;
 }
 
 .weather-today-city {
-  font-size: 18px;
+  font-size: 20px;
+  margin: 0;
   text-transform: capitalize;
 }
 
@@ -279,7 +278,7 @@ body {
 .max-temperature {
   font-size: 20px;
   font-weight: 500;
-  color: rgb(223, 82, 31);
+  color: #ec6e4c;
   padding: 4px 5px;
 }
 
@@ -287,6 +286,7 @@ body {
   position: relative;
   text-align: center;
   font-size: 12px;
+  margin-top: -28px;
 }
 
 .github-link {

@@ -31,6 +31,11 @@ function showCurrentLocation(response) {
   let sunsetTime = document.querySelector(".sunset-time");
   sunriseTime.innerHTML = formatTime(response.data.sys.sunrise * 1000);
   sunsetTime.innerHTML = formatTime(response.data.sys.sunset * 1000);
+  let weatherTodayIcon = document.querySelector(".weather-today-icon");
+  weatherTodayIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function getCurrentLocation(position) {
@@ -62,6 +67,11 @@ function showTemperature(response) {
   let todayMinTemperature = document.querySelector("#today-min-temperature");
   todayMaxTemperature.innerHTML = `${maxTemperature}°C`;
   todayMinTemperature.innerHTML = `${minTemperature}°C`;
+  let weatherTodayIcon = document.querySelector(".weather-today-icon");
+  weatherTodayIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function changeCity(event) {
