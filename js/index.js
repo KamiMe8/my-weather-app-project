@@ -1,5 +1,12 @@
 // Displaying user location data when page is loaded or when icon is clicked
 
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  return `${hours}:${minutes}`;
+}
+
 function showCurrentLocation(response) {
   let todayCity = document.querySelector(".weather-today-city");
   let fiveDaysCity = document.querySelector(".city-name");
@@ -16,8 +23,8 @@ function showCurrentLocation(response) {
   todayMinTemperature.innerHTML = `${minTemperature}°C`;
   let sunriseTime = document.querySelector(".sunrise-time");
   let sunsetTime = document.querySelector(".sunset-time");
-  sunriseTime.innerHTML = response.data.sys.sunrise;
-  sunsetTime.innerHTML = response.data.sys.sunset;
+  sunriseTime.innerHTML = formatTime(response.data.sys.sunrise * 1000);
+  sunsetTime.innerHTML = formatTime(response.data.sys.sunset * 1000);
 }
 
 function getCurrentLocation(position) {
@@ -123,17 +130,5 @@ setInterval(updateTime, 1000);
 // SUNSET AND SUNRISE TIME
 
 // RANDOM QUOTE GENERATION
-
-function launchSpotify(response) {
-  console.log(response);
-}
-
-function getSpotify(event) {
-  let apiKey = "3df12adb1f6d4c5fa6b3b8368e36503b";
-  let apiUrl = "https://api.spotify.com/v1/playlists/playlist_id HTTP/1.1";
-  axios.get(apiUrl).then(launchSpotify);
-}
-
-window.addEventListener("load", getSpotify);
 
 // FIVE DAYS BLOCK: day, date
